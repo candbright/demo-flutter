@@ -28,6 +28,7 @@ class _HomeBottomNavigationBarState extends State<HomeBottomAppBar> {
     _controller = PageController(
       initialPage: _position,
     );
+
     super.initState();
   }
 
@@ -47,7 +48,7 @@ class _HomeBottomNavigationBarState extends State<HomeBottomAppBar> {
         appBar:_buildAppTopBar(),
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.of(context).pushNamed('routeName'),
-          mini: true,
+          mini: false,
           child: Icon(Icons.airplanemode_active),
         ),
         bottomNavigationBar: _buildBottomAppBar(),
@@ -93,16 +94,16 @@ class _HomeBottomNavigationBarState extends State<HomeBottomAppBar> {
         },
         children: [
           Container(
-            color: Colors.green[100],
+            color: Colors.pink[100],
           ),
           Container(
-            color: Colors.green[300],
+            color: Colors.pink[300],
           ),
           Container(
-            color: Colors.green[500],
+            color: Colors.pink[500],
           ),
           Container(
-            color: Colors.green[700],
+            color: Colors.pink[700],
           ),
         ],
       ),
