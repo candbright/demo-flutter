@@ -128,9 +128,9 @@ class _HomeBottomNavigationBarState extends State<HomeBottomAppBar> {
             Text(
               info[i],
               style: TextStyle(
-                  color: active?Colors.black:Colors.grey[400],
-                  fontSize: 24,
-                  fontFamily:'zixin',
+                color: active?Colors.purple:Colors.grey[600],
+                fontFamily:'zixin',
+                fontSize: 23,
               ),
             ),
           ]
