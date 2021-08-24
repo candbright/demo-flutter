@@ -40,7 +40,7 @@ dev_dependencies:
 
 flutter:
   fonts:
-    - family: zixin
+    - family: TolyIcon
       fonts:
         - asset: fonts/ZiXinFangXiaMengShouShuCuTi-2.ttf
         - asset: iconfont/iconfont.ttf
