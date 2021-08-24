@@ -1,4 +1,5 @@
 import 'package:appdemo1/bean/ItemBean.dart';
+import 'package:appdemo1/home/HomeTopAppBar.dart';
 import 'package:appdemo1/home/main/AddView.dart';
 import 'package:appdemo1/home/main/MyHomeView.dart';
 import 'package:appdemo1/home/main/CourseView.dart';
@@ -13,7 +14,7 @@ class HomeMainView extends StatefulWidget {
 }
 
 class _HomeMainViewState extends State<HomeMainView> {
-  var _position = 0;
+  var _position = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +26,7 @@ class _HomeMainViewState extends State<HomeMainView> {
         mainAxisAlignment: MainAxisAlignment.end,
         mainAxisSize: MainAxisSize.max,
         children: [
+          selectTopView(_position),
           selectMainView(_position),
           bottomNavigationBar(),
         ],
@@ -72,10 +74,26 @@ class _HomeMainViewState extends State<HomeMainView> {
     }
   }
 
+  Widget selectTopView(position) {
+    if(position == 0){
+      return HomeTopAppBar();
+    }else{
+      return blankAppBar();
+    }
+  }
+
   Widget errorView() {
     return Container(
       alignment: Alignment.center,
       color: Colors.white,
     );
   }
+  Widget blankAppBar() {
+    return Container(
+      width: 0,
+      height: 0,
+    );
+  }
 }
+
+

@@ -11,7 +11,7 @@ class _HomeTopAppBarState extends State<HomeTopAppBar> {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.bottomCenter,
-      height: MediaQuery.of(context).size.height * (240 / 2400),
+      height: MediaQuery.of(context).size.height * (220 / 2400),
       child: AppBar(
         elevation: 2,
         leading: _createLeading(),
@@ -30,7 +30,7 @@ class _HomeTopAppBarState extends State<HomeTopAppBar> {
   Widget _createTitle() {
     return Container(
 
-      height: MediaQuery.of(context).size.height * (240 / 2400),
+      height: MediaQuery.of(context).size.height * (220 / 2400),
       color: Colors.grey[400],
     );
   }
