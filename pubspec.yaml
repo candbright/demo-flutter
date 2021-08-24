@@ -26,7 +26,7 @@ dependencies:
 
 
   # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style images.
+  # Use with the CupertinoIcons class for iOS style iconfont.
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
@@ -43,10 +43,12 @@ flutter:
     - family: zixin
       fonts:
         - asset: fonts/ZiXinFangXiaMengShouShuCuTi-2.ttf
+        - asset: iconfont/iconfont.ttf
           weight: 500
+
   assets:
-    - images/
+    - iconfont/
   # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the images in
+  # included with your application, so that you can use the iconfont in
   # the material Icons class.
   uses-material-design: true

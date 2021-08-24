@@ -1,3 +1,4 @@
+import 'package:appdemo1/bean/IconBean.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,13 +9,7 @@ class HomeBottomAppBar extends StatefulWidget {
 
 class _HomeBottomAppBarState extends State<HomeBottomAppBar> {
   var _position = 0;
-  final itemsMap = {
-    "花式": "花式",
-    "竞速": "竞速",
-    "自制": "自制",
-    "教程": "教程",
-  };
-
+  var icons = bottomIcon.toList();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,23 +19,43 @@ class _HomeBottomAppBarState extends State<HomeBottomAppBar> {
         children: [
           Container(
             width: MediaQuery.of(context).size.width / 5,
-            color: Colors.pink[100],
+            color: Colors.white,
+            child: Icon(
+              icons[0].iconId,
+              color: icons[0].color,
+            ),
           ),
           Container(
             width: MediaQuery.of(context).size.width / 5,
-            color: Colors.pink[300],
+            color: Colors.white,
+            child: Icon(
+              icons[1].iconId,
+              color: icons[1].color,
+            ),
           ),
           Container(
             width: MediaQuery.of(context).size.width / 5,
-            color: Colors.pink[500],
+            color: Colors.white,
+            child: Icon(
+              icons[2].iconId,
+              color: icons[2].color,
+            ),
           ),
           Container(
             width: MediaQuery.of(context).size.width / 5,
-            color: Colors.pink[700],
+            color: Colors.white,
+            child: Icon(
+              icons[3].iconId,
+              color: icons[3].color,
+            ),
           ),
           Container(
             width: MediaQuery.of(context).size.width / 5,
-            color: Colors.pink[900],
+            color: Colors.white,
+            child: Icon(
+              icons[4].iconId,
+              color: icons[4].color,
+            ),
           ),
         ],
       ),
