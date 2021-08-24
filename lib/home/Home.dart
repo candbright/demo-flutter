@@ -14,10 +14,9 @@ class Home extends StatelessWidget {
         color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.max,
           children: <Widget>[
-            HomeTopAppBar(),
             HomeMainView(),
-            HomeBottomAppBar(),
           ],
         ));
   }

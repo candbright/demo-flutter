@@ -40,15 +40,17 @@ dev_dependencies:
 
 flutter:
   fonts:
-    - family: TolyIcon
+    - family: zixin
       fonts:
         - asset: fonts/ZiXinFangXiaMengShouShuCuTi-2.ttf
+    - family: TolyIcon
+      fonts:
         - asset: iconfont/iconfont.ttf
-          weight: 500
-
   assets:
     - iconfont/
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the iconfont in
   # the material Icons class.
   uses-material-design: true
+
+  

@@ -8,13 +8,10 @@ class CourseView extends StatefulWidget {
 class _CourseViewState extends State<CourseView> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      color: Colors.blue[100],
-      height: MediaQuery
-          .of(context)
-          .size
-          .height  *(1980/ 2400),
-    );
+    return Expanded(
+        child: Container(
+          alignment: Alignment.center,
+          color: Colors.blue[400],
+        ));
   }
 }

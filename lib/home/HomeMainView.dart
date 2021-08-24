@@ -1,5 +1,6 @@
+import 'package:appdemo1/bean/ItemBean.dart';
 import 'package:appdemo1/home/main/AddView.dart';
-import 'package:appdemo1/home/main/CollectView.dart';
+import 'package:appdemo1/home/main/MyHomeView.dart';
 import 'package:appdemo1/home/main/CourseView.dart';
 import 'package:appdemo1/home/main/DanceView.dart';
 import 'package:appdemo1/home/main/SpeedView.dart';
@@ -12,43 +13,69 @@ class HomeMainView extends StatefulWidget {
 }
 
 class _HomeMainViewState extends State<HomeMainView> {
-  String item = "Dance";
+  var _position = 0;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
       color: Colors.white,
-      height: MediaQuery.of(context).size.height * (1980 / 2400),
-      child: selectMainView(item),
+      height: MediaQuery.of(context).size.height,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          selectMainView(_position),
+          bottomNavigationBar(),
+        ],
+      ),
     );
   }
 
-  Widget selectMainView(String item) {
-    if (item == "Dance") {
+  BottomNavigationBar bottomNavigationBar() {
+    return BottomNavigationBar(
+      items: icons.map((item) {
+        return BottomNavigationBarItem(
+            title: Text(
+              item.info,
+              style: TextStyle(fontSize: 12, color: Colors.black),
+            ),
+            icon: Icon(
+              item.iconId,
+              color: item.color,
+            ),
+            backgroundColor: Color(0xffffffff));
+      }).toList(),
+      currentIndex: _position,
+      onTap: _onTapBNB,
+    );
+  }
+
+  void _onTapBNB(int position) {
+    _position = position;
+    setState(() {});
+  }
+
+  Widget selectMainView(int position) {
+    if (position == 0) {
       return DanceView();
-    }else
-    if (item == "Speed") {
+    } else if (position == 1) {
       return SpeedView();
-    }else
-    if (item == "Add") {
+    } else if (position == 2) {
       return AddView();
-    }else
-    if (item == "Course") {
+    } else if (position == 3) {
       return CourseView();
-    }else
-    if (item == "Collect") {
-      return CollectView();
-    }else{
+    } else if (position == 4) {
+      return MyHomeView();
+    } else {
       return errorView();
     }
   }
 
-  Widget errorView(){
+  Widget errorView() {
     return Container(
       alignment: Alignment.center,
       color: Colors.white,
-      height: MediaQuery.of(context).size.height * (1980 / 2400),
     );
   }
 }

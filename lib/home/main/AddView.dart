@@ -5,16 +5,14 @@ class AddView extends StatefulWidget {
   @override
   _AddViewState createState() => _AddViewState();
 }
+
 class _AddViewState extends State<AddView> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Expanded(
+        child: Container(
       alignment: Alignment.center,
-      color: Colors.blue[100],
-      height: MediaQuery
-          .of(context)
-          .size
-          .height  *(1980/ 2400),
-    );
+      color: Colors.blue[300],
+    ));
   }
 }

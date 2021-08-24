@@ -8,13 +8,10 @@ class SpeedView extends StatefulWidget {
 class _SpeedViewState extends State<SpeedView> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      color: Colors.blue[100],
-      height: MediaQuery
-          .of(context)
-          .size
-          .height  *(1980/ 2400),
-    );
+    return Expanded(
+        child: Container(
+          alignment: Alignment.center,
+          color: Colors.blue[200],
+        ));
   }
 }

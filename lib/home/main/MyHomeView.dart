@@ -1,17 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DanceView extends StatefulWidget {
+class MyHomeView extends StatefulWidget {
   @override
-  _DanceViewState createState() => _DanceViewState();
+  _MyHomeViewState createState() => _MyHomeViewState();
 }
-class _DanceViewState extends State<DanceView> {
+class _MyHomeViewState extends State<MyHomeView> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
           alignment: Alignment.center,
-          color: Colors.blue[100],
+          color: Colors.blue[500],
         ));
   }
 }
